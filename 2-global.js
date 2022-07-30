@@ -13,6 +13,7 @@ setInterval(()=>{
 // CommonJs, every file is amodule (by default)
 // Modules - Encapsulated Code (only share minimum)
 
+
 // process    - info about env where the program is being executed
 
 

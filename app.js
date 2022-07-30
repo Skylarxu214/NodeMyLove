@@ -1,16 +1,16 @@
-// globals    - no window!!
-// __driname  - path to current directory
-// __filename - file name
-// require    - function to use modules(CommonJs)
-// module     - info about current module (file)
+const path = require('path')
 
-// process    - info about env where the program is being executed
+console.log(path.sep)
 
-const names = require('./4-names');
-const sayHi = require('./5-utils')
+const filePath = path.join('./content', 'subfolder','text.txt')
 
+console.log(filePath)
+//=> content/subfolder/text.txt
 
+const base = path.basename(filePath)
+console.log(base)
+//=>text.txt
 
-sayHi('Susan')
-sayHi(names.john)
-sayHi(names.peter)
+const absolute = path.resolve(__dirname,'content','subfolder','test.txt')
+console.log(absolute)
+//=> /Users/tianx/Documents/NodeJs/content/subfolder/test.txt
